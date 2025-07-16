@@ -3,6 +3,10 @@
   "displayName": "XML FIRA Formatter",
   "description": "Formatea XML y el HTML dentro de sus CDATA.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axeleszu/xml-fira-formatter.git"
+  },
   "engines": {
     "vscode": "^1.102.0"
   },
