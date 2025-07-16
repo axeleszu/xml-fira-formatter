@@ -1,6 +1,6 @@
 {
   "name": "xml-fira-formatter",
-  "displayName": "XML FIRA Formatter",
+  "displayName": "XML HTML Formatter",
   "description": "Formatea XML y el HTML dentro de sus CDATA.",
   "version": "0.0.1",
   "repository": {
@@ -22,7 +22,7 @@
     "commands": [
       {
         "command": "xml-fira-formatter.format",
-        "title": "Formatear XML FIRA"
+        "title": "Formatear XML HTML"
       }
     ],
     "languages": [

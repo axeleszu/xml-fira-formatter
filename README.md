@@ -1,8 +1,8 @@
-# XML FIRA Formatter
+# XML HTML Formatter
 
 ## Descripción
 
-**XML FIRA Formatter** es una extensión para Visual Studio Code diseñada para formatear documentos XML de una manera específica. Su principal característica es la capacidad de identificar y formatear código HTML que se encuentra encapsulado dentro de secciones `<![CDATA[...]]>`.
+**XML HTML Formatter** es una extensión para Visual Studio Code diseñada para formatear documentos XML de una manera específica. Su principal característica es la capacidad de identificar y formatear código HTML que se encuentra encapsulado dentro de secciones `<![CDATA[...]]>`.
 
 El proceso de formateo se realiza en dos pasos principales:
 1.  **Formateo de HTML dentro de CDATA**: La extensión busca todas las secciones `CDATA` en el documento, extrae su contenido y, si contiene código HTML, lo formatea de manera independiente.
