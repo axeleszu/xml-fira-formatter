@@ -1,0 +1,30 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "scopeName": "source.fira-xml",
+    "patterns": [
+        {
+            "comment": "Formatea HTML dentro de CDATA.",
+            "begin": "(<!\\[CDATA\\[)",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.cdata.begin.fira-xml"
+                }
+            },
+            "end": "(\\]\\]>)",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.cdata.end.fira-xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "text.html.derivative"
+                }
+            ]
+        },
+        {
+            "comment": "Mantener el formato XML.",
+            "include": "text.xml"
+        }
+    ]
+}

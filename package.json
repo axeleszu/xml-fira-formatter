@@ -1,0 +1,83 @@
+{
+  "name": "xml-fira-formatter",
+  "displayName": "XML FIRA Formatter",
+  "description": "Formatea XML y el HTML dentro de sus CDATA.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onCommand:xml-fira-formatter.format"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "xml-fira-formatter.format",
+        "title": "Formatear XML FIRA"
+      }
+    ],
+    "languages": [
+      {
+        "id": "fira-xml",
+        "aliases": [
+          "FIRA XML",
+          "firaxml"
+        ],
+        "extensions": [
+          ".xml"
+        ],
+        "configuration": "./language-configuration.json",
+        "scopeName": "source.fira-xml"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fira-xml",
+        "scopeName": "source.fira-xml",
+        "path": "./syntaxes/fira-xml.tmLanguage.json"
+      }
+    ],
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": [
+              "punctuation.definition.cdata.begin.fira-xml",
+              "punctuation.definition.cdata.end.fira-xml"
+            ],
+            "settings": {
+              "foreground": "#F44747"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.102.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@prettier/plugin-xml": "^3.4.2",
+    "prettier": "^3.6.2"
+  }
+}

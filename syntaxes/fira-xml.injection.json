@@ -1,0 +1,25 @@
+{
+    "scopeName": "fira-xml.cdata.injection",
+    "patterns": [
+        {
+            "comment": "Buscar las secciones CDATA.",
+            "begin": "(<!\\[CDATA\\[)",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.string.begin.xml"
+                }
+            },
+            "end": "(\\]\\]>)",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.string.end.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "text.html.derivative"
+                }
+            ]
+        }
+    ]
+}
